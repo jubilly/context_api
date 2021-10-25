@@ -1,11 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
+import { useCount } from "../../context/Count";
 
-function Counter({ count, setCount }) {
+function Counter() {
+  const { count, setCount } = useCount();
   return (
     <div>
       <span>
-        <b>Count:</b>
-        {count}
+        <b>Count: {count}</b>
       </span>
       <button
         onClick={() => {

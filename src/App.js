@@ -1,17 +1,17 @@
 import React, { useState } from "react";
-import "./App.css";
 import Counter from "./components/Counter/Counter";
 import Mirror from "./components/MirrorCounter/Mirror";
+import CountProvider from "./context/Count";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <div className="App">
-      <Counter count={count} setCount={setCount} />
-      <hr />
-      <Mirror count={count} />
-    </div>
+    <CountProvider>
+      <div>
+        <Counter />
+        <hr />
+        <Mirror />
+      </div>
+    </CountProvider>
   );
 }
 
