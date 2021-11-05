@@ -1,10 +1,12 @@
 import React from "react";
+import { useCount } from "../../context/Count";
 
-function Mirror({ count }) {
+function Mirror() {
+  const { count } = useCount();
+
   return (
     <div>
-      <b>Count:</b>
-      {count}
+      <b>Count: {count}</b>
     </div>
   );
 }
