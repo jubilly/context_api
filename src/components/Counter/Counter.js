@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 function Counter({ count, setCount }) {
+  console.log("teste");
   return (
     <div>
       <span>
