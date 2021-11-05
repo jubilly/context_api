@@ -14,7 +14,6 @@ export default function CountProvider({ children }) {
 
 export function useCount() {
   const context = useContext(CountContext);
-  if (!context) throw new Error('erro');
   const { count, setCount } = context;
 
   return {
